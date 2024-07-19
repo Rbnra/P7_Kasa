@@ -1,8 +1,9 @@
 import { BrowserRouter as Router, Routes, Route, NavLink } from "react-router-dom";
 import logo from "./assets/images/logo.png";
-import ImageHome from "./assets/images/ImageHome.png";
 import "./App.scss";
 import { About } from "./pages/about/About";
+import { Gallery } from "./pages/gallery/Gallery";
+import { Error404 } from "./pages/error/Error404";
 
 export const App: React.FC = () => {
 
@@ -20,16 +21,12 @@ export const App: React.FC = () => {
             </NavLink>
           </nav>
         </header>
-        <main>
-        <div className="image-container">
-            <img src={ImageHome} alt="Image Home" className="home-image" />
-            <div className="overlay"></div>
-            <div className="text-overlay">Chez vous, partout et ailleurs</div>
-          </div>
-          <Routes>
-            <Route path="/about" element={<About />} />
-          </Routes>
-        </main>
+        <Routes>
+          <Route path="/about" element={<About />} />
+          <Route path="/" element={<Gallery />} />
+          <Route path="/*" element={<Error404 />} />
+          <Route path="/error404" element={<Error404 />} />
+        </Routes>
       </Router>
       <footer>
         <img src={logo} alt="logo" />

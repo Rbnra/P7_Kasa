@@ -1,0 +1,43 @@
+.GalleryCard {
+    .card {
+        position: relative;
+        width: 21vw;
+        aspect-ratio: 1/1;
+        border-radius: 10px;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+
+        img {
+            position: absolute;
+            height: 100%;
+        }
+
+        h2 {
+            position: absolute;
+            margin: 0;
+            padding: 5%;
+            padding-top: 20%;
+            z-index: 1;
+            width: 90%;
+            color: white;
+            font-size: 1rem;
+            bottom: 0;
+            background-image: linear-gradient(to bottom, transparent, #1616169f);
+        }
+    }
+}
+
+@media (max-width: 768px) {
+
+    .card {
+        height: 100%;
+        width: 100%;
+
+        h2 {
+            font-size: 18px;
+        }
+    }
+}
