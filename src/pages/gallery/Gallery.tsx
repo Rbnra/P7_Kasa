@@ -13,7 +13,7 @@ export const Gallery: React.FC = () => {
                 <h1>Chez vous, partout et ailleurs</h1>
             </div>
             <div className="cards-container">
-                {logements.map((cardData: CardData) => <GalleryCard key={cardData.id} cardData={cardData}/>                    
+                {logements.map((cardData: CardData) => <GalleryCard key={cardData.id} cardData={cardData} />
                 )
                 }
             </div>

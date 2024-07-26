@@ -11,13 +11,13 @@ export const App: React.FC = () => {
     <>
       <Router>
         <header>
-          <img src={logo} alt="logo kasa" />
+          <img className="kasa" src={logo} alt="logo kasa" />
           <nav>
-            <NavLink to="/" className={({ isActive }) => isActive ? "active-link" : ""}>
-              Accueil
+            <NavLink to="/" className={({ isActive }) => isActive ? "active-link" : ""} >
+              <p className="accueil1">Accueil</p>
             </NavLink>
             <NavLink to="/about" className={({ isActive }) => isActive ? "active-link" : ""}>
-              A Propos
+              <p className="accueil1">A Propos</p>
             </NavLink>
           </nav>
         </header>
@@ -28,9 +28,9 @@ export const App: React.FC = () => {
           <Route path="/error404" element={<Error404 />} />
         </Routes>
       </Router>
-      <footer>
+      <footer className="foot">
         <img src={logo} alt="logo" />
-        <p>© 2020 Kasa. All rights reserved</p>
+        <p className="ligne">© 2020 Kasa. All rights reserved</p>
       </footer>
     </>
   );
