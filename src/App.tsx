@@ -4,6 +4,7 @@ import "./App.scss";
 import { About } from "./pages/about/About";
 import { Gallery } from "./pages/gallery/Gallery";
 import { Error404 } from "./pages/error/Error404";
+import { CardInfo } from "./pages/cardInfo/CardInfo";
 
 export const App: React.FC = () => {
 
@@ -25,7 +26,7 @@ export const App: React.FC = () => {
           <Route path="/about" element={<About />} />
           <Route path="/" element={<Gallery />} />
           <Route path="/*" element={<Error404 />} />
-        
+          <Route path='card/:id' element={<CardInfo />} />
           <Route path="/error404" element={<Error404 />} />
         </Routes>
       </Router>
